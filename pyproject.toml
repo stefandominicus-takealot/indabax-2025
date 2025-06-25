@@ -1,0 +1,27 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools >= 61.0"]
+
+[project]
+name = "indabax-2025"
+requires-python = "~= 3.10.0"
+version = "1.0.0" # required, but not used for anything
+
+[tool.ruff]
+fix = true
+line-length = 88
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "recommender_systems",
+    "tfx_tfrs",
+]
+
+[tool.setuptools.packages.find]
+include = [
+    "recommender_systems",
+    "tfx_tfrs",
+]
