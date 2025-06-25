@@ -19,6 +19,11 @@ conda activate $VIRTUAL_ENVIRONMENT_NAME
 # Install the required dependencies
 make install
 
+# Add a kernel from that environment
+DL_ANACONDA_ENV_HOME=$DL_ANACONDA_HOME/envs/$VIRTUAL_ENVIRONMENT_NAME
+python -m ipykernel install --prefix $DL_ANACONDA_ENV_HOME --name $VIRTUAL_ENVIRONMENT_NAME --display-name $VIRTUAL_ENVIRONMENT_NAME
+rm -rf /opt/conda/envs/$VIRTUAL_ENVIRONMENT_NAME/share/jupyter/kernels/python3
+
 # Pull the dataset CSV files we'll be working with today
 python -m recommender_systems.pull_data
 ```
