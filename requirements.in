@@ -5,5 +5,6 @@ jupyterlab
 matplotlib
 ruff
 scann
+streamlit
 tensorflow-recommenders
 tfx ~= 1.15.0 # Avoid some Keras incompatibilities in 1.16.0

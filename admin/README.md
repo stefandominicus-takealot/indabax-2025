@@ -41,3 +41,8 @@ workbench instances create $INSTANCE_NAME \
 --subnet-region=europe-west1
 ```
 
+## Leaderboard
+
+```sh
+streamlit run admin/leaderboard.py
+```

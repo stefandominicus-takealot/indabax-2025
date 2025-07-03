@@ -243,3 +243,6 @@ pyrightconfig.json
 # TFX
 **/pipeline-root
 **/pushed-models
+
+# Leaderboard
+leaderboard.json
