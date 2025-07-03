@@ -20,6 +20,8 @@ absl-py==1.4.0
     #   tensorflow-transform
     #   tfx
     #   tfx-bsl
+altair==5.5.0
+    # via streamlit
 annotated-types==0.7.0
     # via pydantic
 anyio==4.9.0
@@ -27,7 +29,7 @@ anyio==4.9.0
     #   google-genai
     #   httpx
     #   jupyter-server
-apache-beam==2.65.0
+apache-beam==2.66.0
     # via
     #   tensorflow-data-validation
     #   tensorflow-model-analysis
@@ -62,10 +64,13 @@ beautifulsoup4==4.13.4
     # via nbconvert
 bleach==6.2.0
     # via nbconvert
+blinker==1.9.0
+    # via streamlit
 cachetools==5.5.2
     # via
     #   apache-beam
     #   google-auth
+    #   streamlit
 certifi==2025.6.15
     # via
     #   httpcore
@@ -81,6 +86,7 @@ charset-normalizer==3.4.2
 click==8.2.1
     # via
     #   nltk
+    #   streamlit
     #   tfx
 colorama==0.4.6
     # via sacrebleu
@@ -92,7 +98,7 @@ contourpy==1.3.2
     # via matplotlib
 crcmod==1.7
     # via apache-beam
-cryptography==45.0.4
+cryptography==45.0.5
     # via secretstorage
 cycler==0.12.1
     # via matplotlib
@@ -136,6 +142,10 @@ fqdn==1.5.1
     # via jsonschema
 gast==0.6.0
     # via tensorflow
+gitdb==4.0.12
+    # via gitpython
+gitpython==3.1.44
+    # via streamlit
 google-api-core==2.25.1
     # via
     #   apache-beam
@@ -204,7 +214,7 @@ google-auth-oauthlib==1.2.2
     #   pandas-gbq
     #   pydata-google-auth
     #   tensorboard
-google-cloud-aiplatform==1.97.0
+google-cloud-aiplatform==1.101.0
     # via
     #   apache-beam
     #   tfx
@@ -229,7 +239,7 @@ google-cloud-core==2.4.3
     #   google-cloud-storage
 google-cloud-datastore==2.21.0
     # via apache-beam
-google-cloud-dlp==3.30.0
+google-cloud-dlp==3.31.0
     # via apache-beam
 google-cloud-language==2.17.2
     # via apache-beam
@@ -258,7 +268,7 @@ google-crc32c==1.7.1
     #   google-cloud-bigtable
     #   google-cloud-storage
     #   google-resumable-media
-google-genai==1.20.0
+google-genai==1.24.0
     # via google-cloud-aiplatform
 google-pasta==0.2.0
     # via tensorflow
@@ -295,7 +305,7 @@ grpcio==1.65.5
     #   tensorflow
     #   tensorflow-serving-api
     #   tfx
-grpcio-status==1.49.0rc1
+grpcio-status==1.48.2
     # via
     #   google-api-core
     #   google-cloud-pubsub
@@ -329,6 +339,7 @@ importlib-metadata==8.7.0
     # via
     #   keyring
     #   opentelemetry-api
+    #   streamlit
 ipykernel==6.29.5
     # via jupyterlab
 ipython==7.34.0
@@ -346,7 +357,7 @@ jaraco-classes==3.4.0
     # via keyring
 jaraco-context==6.0.1
     # via keyring
-jaraco-functools==4.1.0
+jaraco-functools==4.2.1
     # via keyring
 jedi==0.19.2
     # via ipython
@@ -356,11 +367,13 @@ jeepney==0.9.0
     #   secretstorage
 jinja2==3.1.6
     # via
+    #   altair
     #   jupyter-server
     #   jupyterlab
     #   jupyterlab-server
     #   ml-pipelines-sdk
     #   nbconvert
+    #   pydeck
     #   tfx
 joblib==1.5.1
     # via
@@ -374,6 +387,7 @@ jsonpointer==3.0.0
     # via jsonschema
 jsonschema==4.24.0
     # via
+    #   altair
     #   apache-beam
     #   jupyter-events
     #   jupyterlab-server
@@ -407,7 +421,7 @@ jupyter-server==2.16.0
     #   notebook-shim
 jupyter-server-terminals==0.5.3
     # via jupyter-server
-jupyterlab==4.4.3
+jupyterlab==4.4.4
     # via
     #   -r requirements.in
     #   notebook
@@ -437,9 +451,9 @@ kubernetes==12.0.1
     # via tfx
 libclang==18.1.1
     # via tensorflow
-lxml==5.4.0
+lxml==6.0.0
     # via sacrebleu
-markdown==3.8
+markdown==3.8.2
     # via tensorboard
 markupsafe==3.0.2
     # via
@@ -466,6 +480,8 @@ more-itertools==10.7.0
     # via
     #   jaraco-classes
     #   jaraco-functools
+narwhals==1.45.0
+    # via altair
 nbclient==0.10.2
     # via nbconvert
 nbconvert==7.16.6
@@ -479,7 +495,7 @@ nest-asyncio==1.6.0
     # via ipykernel
 nltk==3.9.1
     # via rouge-score
-notebook==7.4.3
+notebook==7.4.4
     # via widgetsnbextension
 notebook-shim==0.2.4
     # via
@@ -496,11 +512,13 @@ numpy==1.26.4
     #   pandas
     #   pandas-gbq
     #   pyarrow
+    #   pydeck
     #   rouge-score
     #   sacrebleu
     #   scann
     #   scipy
     #   shapely
+    #   streamlit
     #   tensorboard
     #   tensorflow
     #   tensorflow-data-validation
@@ -511,7 +529,7 @@ numpy==1.26.4
     #   tfx-bsl
 oauth2client==4.1.3
     # via google-apitools
-oauthlib==3.3.0
+oauthlib==3.3.1
     # via requests-oauthlib
 objsize==0.7.1
     # via apache-beam
@@ -534,6 +552,7 @@ overrides==7.7.0
     #   jupyter-server
 packaging==25.0
     # via
+    #   altair
     #   apache-beam
     #   db-dtypes
     #   google-cloud-aiplatform
@@ -548,6 +567,7 @@ packaging==25.0
     #   ml-pipelines-sdk
     #   nbconvert
     #   pandas-gbq
+    #   streamlit
     #   tensorflow
     #   tfx
 pandas==1.5.3
@@ -555,6 +575,7 @@ pandas==1.5.3
     #   db-dtypes
     #   google-cloud-bigquery
     #   pandas-gbq
+    #   streamlit
     #   tensorflow-data-validation
     #   tensorflow-model-analysis
     #   tfx-bsl
@@ -568,9 +589,10 @@ pexpect==4.9.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
-pillow==11.2.1
+pillow==11.3.0
     # via
     #   matplotlib
+    #   streamlit
     #   tensorflow-model-analysis
 platformdirs==4.3.8
     # via jupyter-core
@@ -625,6 +647,8 @@ protobuf==3.20.3
     #   ml-metadata
     #   ml-pipelines-sdk
     #   proto-plus
+    #   scann
+    #   streamlit
     #   tensorboard
     #   tensorflow
     #   tensorflow-data-validation
@@ -639,6 +663,7 @@ psutil==7.0.0
     # via
     #   ipykernel
     #   portpicker
+    #   streamlit
 ptyprocess==0.7.0
     # via
     #   pexpect
@@ -649,6 +674,7 @@ pyarrow==10.0.1
     #   db-dtypes
     #   google-cloud-bigquery
     #   pandas-gbq
+    #   streamlit
     #   tensorflow-data-validation
     #   tensorflow-model-analysis
     #   tensorflow-transform
@@ -675,13 +701,15 @@ pydantic-core==2.33.2
     # via pydantic
 pydata-google-auth==1.9.1
     # via pandas-gbq
+pydeck==0.9.1
+    # via streamlit
 pydot==1.4.2
     # via
     #   apache-beam
     #   tensorflow-transform
 pyfarmhash==0.3.2
     # via tensorflow-data-validation
-pygments==2.19.1
+pygments==2.19.2
     # via
     #   ipython
     #   nbconvert
@@ -709,11 +737,13 @@ pytz==2025.2
     # via
     #   apache-beam
     #   pandas
+    #   streamlit
 pyyaml==6.0.2
     # via
     #   apache-beam
     #   jupyter-events
     #   kubernetes
+    #   streamlit
     #   tfx
 pyzmq==27.0.0
     # via
@@ -746,6 +776,7 @@ requests==2.32.4
     #   keyrings-google-artifactregistry-auth
     #   kubernetes
     #   requests-oauthlib
+    #   streamlit
     #   tensorboard
 requests-oauthlib==2.0.0
     # via
@@ -761,7 +792,7 @@ rfc3986-validator==0.1.1
     #   jupyter-events
 rouge-score==0.1.2
     # via tensorflow-model-analysis
-rpds-py==0.25.1
+rpds-py==0.26.0
     # via
     #   jsonschema
     #   referencing
@@ -769,7 +800,7 @@ rsa==4.9.1
     # via
     #   google-auth
     #   oauth2client
-ruff==0.12.0
+ruff==0.12.1
     # via -r requirements.in
 sacrebleu==2.5.1
     # via tensorflow-model-analysis
@@ -799,10 +830,13 @@ six==1.17.0
     #   python-dateutil
     #   rfc3339-validator
     #   rouge-score
+    #   streamlit
     #   tensorboard
     #   tensorflow
     #   tensorflow-data-validation
     #   tensorflow-model-analysis
+smmap==5.0.2
+    # via gitdb
 sniffio==1.3.1
     # via anyio
 sortedcontainers==2.4.0
@@ -811,8 +845,14 @@ soupsieve==2.7
     # via beautifulsoup4
 sqlparse==0.5.3
     # via google-cloud-spanner
+streamlit==1.46.1
+    # via -r requirements.in
 tabulate==0.9.0
     # via sacrebleu
+tenacity==8.5.0
+    # via
+    #   google-genai
+    #   streamlit
 tensorboard==2.15.2
     # via tensorflow
 tensorboard-data-server==0.7.2
@@ -869,6 +909,8 @@ tfx-bsl==1.15.1
     #   tfx
 tinycss2==1.4.0
     # via bleach
+toml==0.10.2
+    # via streamlit
 tomli==2.2.1
     # via jupyterlab
 tornado==6.5.1
@@ -878,6 +920,7 @@ tornado==6.5.1
     #   jupyter-server
     #   jupyterlab
     #   notebook
+    #   streamlit
     #   terminado
 tqdm==4.67.1
     # via nltk
@@ -900,6 +943,7 @@ types-python-dateutil==2.9.0.20250516
     # via arrow
 typing-extensions==4.14.0
     # via
+    #   altair
     #   anyio
     #   apache-beam
     #   async-lru
@@ -915,6 +959,7 @@ typing-extensions==4.14.0
     #   pydantic
     #   pydantic-core
     #   referencing
+    #   streamlit
     #   tensorflow
     #   tfx
     #   typing-inspection
@@ -924,10 +969,12 @@ uri-template==1.3.0
     # via jsonschema
 uritemplate==3.0.1
     # via google-api-python-client
-urllib3==2.4.0
+urllib3==2.5.0
     # via
     #   kubernetes
     #   requests
+watchdog==6.0.0
+    # via streamlit
 wcwidth==0.2.13
     # via prompt-toolkit
 webcolors==24.11.1
