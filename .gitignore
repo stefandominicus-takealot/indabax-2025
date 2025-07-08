@@ -244,3 +244,6 @@ pyrightconfig.json
 **/pipeline-root
 **/pushed-models
 **/tensorboard
+
+# Leaderboard
+leaderboard.json
